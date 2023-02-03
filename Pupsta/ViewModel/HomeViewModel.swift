@@ -15,7 +15,9 @@ class HomeViewModel: ObservableObject {
     init() {
         fetched_puppies = [
             Pup(name: "Pauly", place: "home", profilePic: "dog2"),
-            Pup(name: "Not Pauly", place: "other home", profilePic: "dog2")
+            Pup(name: "Not Pauly", place: "other home", profilePic: "dog2"),
+            Pup(name: "Not Psa", place: "other home1", profilePic: "dog2"),
+            Pup(name: "Not Piwea", place: "other home2", profilePic: "dog2")
         ]
         
         displaying_pup = fetched_puppies

@@ -16,17 +16,18 @@ struct StackedCardsView: View {
         GeometryReader { proxy in
             let size = proxy.size
             
-            Spacer()
+            let index = CGFloat(vm.getIndex(pup: pup))
+            let tOffset = (index <= 2 ? index : 2) * 15
             
             ZStack {
                 Image(pup.profilePic)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: size.width, height: size.height)
+                    .frame(width: size.width - tOffset, height: size.height)
                     .cornerRadius(15)
+                    .offset(y: -tOffset)
             }
-            
-            Spacer()
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
 
         }
     }

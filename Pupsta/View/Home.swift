@@ -16,16 +16,15 @@ struct Home: View {
             Button {
                 
             } label: {
-//                Image("menu")
-//                    .resizable()
-//                    .renderingMode(.template)
-//                    .aspectRatio(contentMode: .fit)
-//                    .frame(width: 22, height: 22)
-                Text("T")
+                Image(systemName: "line.3.horizontal.decrease")
+                    .resizable()
+                    .renderingMode(.template)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 22, height: 22)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .overlay(
-                Text("Discover").font(.title.bold())
+                Text("pupsta").font(.title.bold())
             ).foregroundColor(.black)
                 .padding()
             
