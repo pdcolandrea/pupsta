@@ -20,4 +20,12 @@ class HomeViewModel: ObservableObject {
         
         displaying_pup = fetched_puppies
     }
+    
+    func getIndex(pup: Pup) -> Int {
+        let index = displaying_pup?.firstIndex(where: { currentPup in
+            return pup.id == currentPup.id
+        }) ?? 0
+        
+        return index
+    }
 }
