@@ -15,6 +15,8 @@
 		1AE472BC298C9F6A00939C9D /* PupstaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE472BB298C9F6A00939C9D /* PupstaUITests.swift */; };
 		1AE472BE298C9F6A00939C9D /* PupstaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE472BD298C9F6A00939C9D /* PupstaUITestsLaunchTests.swift */; };
 		1AE472CC298C9FF000939C9D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE472CB298C9FF000939C9D /* Home.swift */; };
+		1AE472CF298CA58700939C9D /* Pup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE472CE298CA58700939C9D /* Pup.swift */; };
+		1AE472D2298CA5DE00939C9D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE472D1298CA5DE00939C9D /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1AE472BB298C9F6A00939C9D /* PupstaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupstaUITests.swift; sourceTree = "<group>"; };
 		1AE472BD298C9F6A00939C9D /* PupstaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupstaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1AE472CB298C9FF000939C9D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1AE472CE298CA58700939C9D /* Pup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pup.swift; sourceTree = "<group>"; };
+		1AE472D1298CA5DE00939C9D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		1AE4729E298C9F6900939C9D /* Pupsta */ = {
 			isa = PBXGroup;
 			children = (
+				1AE472D0298CA5CA00939C9D /* ViewModel */,
+				1AE472CD298CA57600939C9D /* Model */,
 				1AE472CA298C9FD600939C9D /* View */,
 				1AE4729F298C9F6900939C9D /* PupstaApp.swift */,
 				1AE472A1298C9F6900939C9D /* ContentView.swift */,
@@ -138,6 +144,22 @@
 				1AE472CB298C9FF000939C9D /* Home.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1AE472CD298CA57600939C9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AE472CE298CA58700939C9D /* Pup.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AE472D0298CA5CA00939C9D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1AE472D1298CA5DE00939C9D /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE472A2298C9F6900939C9D /* ContentView.swift in Sources */,
+				1AE472CF298CA58700939C9D /* Pup.swift in Sources */,
 				1AE472CC298C9FF000939C9D /* Home.swift in Sources */,
+				1AE472D2298CA5DE00939C9D /* HomeViewModel.swift in Sources */,
 				1AE472A0298C9F6900939C9D /* PupstaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
