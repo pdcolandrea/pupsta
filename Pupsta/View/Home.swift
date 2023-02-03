@@ -29,10 +29,26 @@ struct Home: View {
             ).foregroundColor(.black)
                 .padding()
             
+            Spacer()
+            
             // pupps
             ZStack {
-                
-            }.padding(.vertical)
+                if let puppies = vm.displaying_pup {
+                    if puppies.isEmpty {
+                        Text("No puppies found :( ")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    } else {
+                        // Reversed due to zstack
+                        ForEach(puppies.reversed()) { p in
+                            StackedCardsView(pup: p)
+                                .environmentObject(vm)
+                        }
+                    }
+                } else {
+                    ProgressView()
+                }
+            }.padding(.top, 30).padding().padding(.vertical)
             
             // could be wrong vv
             Spacer()
