@@ -12,6 +12,7 @@ struct StackedCardsView: View {
     var pup: Pup
     
     @State private var xOffset: CGFloat = 0
+    @State private var endSwipe: Bool = false
     @GestureState private var isDragged: Bool = false
     
     var body: some View {
@@ -34,7 +35,8 @@ struct StackedCardsView: View {
 
         }
         .offset(x: xOffset)
-        .contentShape(Rectangle())
+        .rotationEffect(.init(degrees: getRotation(angle: 8)))
+        .contentShape(Rectangle().trim(from: 0, to: endSwipe ? 0 : 1))
             .gesture(
                 DragGesture()
                     .updating($isDragged, body: { value, out, _ in
@@ -53,6 +55,8 @@ struct StackedCardsView: View {
                         withAnimation {
                             if swipeStatus > (width / 2) {
                                 xOffset = (translation > 0 ? width : -width) * 2
+                                endSwipe = true
+                                endSwipeAction()
                             } else {
                                 xOffset = .zero
                             }
@@ -60,6 +64,25 @@ struct StackedCardsView: View {
                     })
             
             )
+    }
+    
+    func getRotation(angle: Double) -> Double {
+        return (xOffset / (UIScreen.screenSize.width - 50)) * angle
+    }
+    
+    func endSwipeAction() {
+        withAnimation(.none) {
+            endSwipe = true
+        }
+        
+        // preserve memory
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            if let _ = vm.displaying_pup?.first {
+                let _ = withAnimation {
+                    vm.displaying_pup?.removeFirst()
+                }
+            }
+        }
     }
 }
 

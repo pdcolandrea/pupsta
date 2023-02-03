@@ -90,12 +90,15 @@ struct Home: View {
                 Button {
                     
                 } label: {
-                    Image(systemName: "suit.heart.fill").font(.system(size: 20, weight: .bold))
+                    Image("dog-icon")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                        .aspectRatio(contentMode: .fit)
                         .foregroundColor(.white)
                         .shadow(radius: 5)
-                        .padding(18)
-                        .background(Color("Pink"))
+
                         .clipShape(Circle())
+                    
                 }
             }.padding(.bottom)
             
