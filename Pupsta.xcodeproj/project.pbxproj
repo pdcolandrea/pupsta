@@ -14,6 +14,7 @@
 		1AE472B2298C9F6A00939C9D /* PupstaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE472B1298C9F6A00939C9D /* PupstaTests.swift */; };
 		1AE472BC298C9F6A00939C9D /* PupstaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE472BB298C9F6A00939C9D /* PupstaUITests.swift */; };
 		1AE472BE298C9F6A00939C9D /* PupstaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE472BD298C9F6A00939C9D /* PupstaUITestsLaunchTests.swift */; };
+		1AE472CC298C9FF000939C9D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE472CB298C9FF000939C9D /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		1AE472B7298C9F6A00939C9D /* PupstaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupstaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE472BB298C9F6A00939C9D /* PupstaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupstaUITests.swift; sourceTree = "<group>"; };
 		1AE472BD298C9F6A00939C9D /* PupstaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupstaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1AE472CB298C9FF000939C9D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		1AE4729E298C9F6900939C9D /* Pupsta */ = {
 			isa = PBXGroup;
 			children = (
+				1AE472CA298C9FD600939C9D /* View */,
 				1AE4729F298C9F6900939C9D /* PupstaApp.swift */,
 				1AE472A1298C9F6900939C9D /* ContentView.swift */,
 				1AE472A3298C9F6A00939C9D /* Assets.xcassets */,
@@ -127,6 +130,14 @@
 				1AE472BD298C9F6A00939C9D /* PupstaUITestsLaunchTests.swift */,
 			);
 			path = PupstaUITests;
+			sourceTree = "<group>";
+		};
+		1AE472CA298C9FD600939C9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1AE472CB298C9FF000939C9D /* Home.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE472A2298C9F6900939C9D /* ContentView.swift in Sources */,
+				1AE472CC298C9FF000939C9D /* Home.swift in Sources */,
 				1AE472A0298C9F6900939C9D /* PupstaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
