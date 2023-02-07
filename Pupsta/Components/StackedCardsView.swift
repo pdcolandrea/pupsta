@@ -26,10 +26,13 @@ struct StackedCardsView: View {
             ZStack {
                 Image(pup.profilePic)
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
                     .frame(width: size.width - tOffset, height: size.height)
                     .cornerRadius(15)
                     .offset(y: -tOffset)
+                VStack {
+                    Text(pup.name)
+                    Text(pup.place)
+                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading).padding()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
 

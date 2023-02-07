@@ -57,50 +57,26 @@ struct Home: View {
                 Button {
                     
                 } label: {
-                    Image(systemName: "arrow.uturn.backward").font(.system(size: 15, weight: .bold))
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .padding(13)
-                        .background(Color("Gray"))
-                        .clipShape(Circle())
-                }
-                
-                Button {
-                    
-                } label: {
-                    Image(systemName: "xmark").font(.system(size: 20, weight: .black))
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .padding(18)
-                        .background(Color("Blue"))
-                        .clipShape(Circle())
-                }
-                
-                Button {
-                    
-                } label: {
-                    Image(systemName: "star.fill").font(.system(size: 15, weight: .bold))
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .padding(13)
-                        .background(Color.yellow)
-                        .clipShape(Circle())
-                }
-                
-                Button {
-                    
-                } label: {
                     Image("dog-icon")
                         .resizable()
-                        .frame(width: 40, height: 40)
+                        .frame(width: 45, height: 45)
                         .aspectRatio(contentMode: .fit)
-                        .foregroundColor(.white)
                         .shadow(radius: 5)
-
                         .clipShape(Circle())
                     
                 }
-            }.padding(.bottom)
+                
+                Spacer()
+
+                Button {
+                    
+                } label: {
+                    Image(systemName: "trophy.fill").font(.system(size: 25))
+                        .foregroundColor(.black)
+//                        .shadow(radius: 5)
+                }
+                
+            }.padding(.bottom).padding(.horizontal, 30)
             
         }
 //        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
