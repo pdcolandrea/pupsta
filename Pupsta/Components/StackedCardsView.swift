@@ -29,9 +29,13 @@ struct StackedCardsView: View {
                     .frame(width: size.width - tOffset, height: size.height)
                     .cornerRadius(15)
                     .offset(y: -tOffset)
-                VStack {
-                    Text(pup.name)
-                    Text(pup.place)
+                HStack {
+                    VStack {
+                        Text(pup.name)
+                        Text(pup.place)
+                    }
+                    Spacer()
+                    Text("INFO")
                 }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading).padding()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
